@@ -1,0 +1,41 @@
+<div>
+<div class="alert alert-danger" id="invalid">Invalid username,email or password</div>
+	<form role="form" name="infoform" id="infoform" method="post" action="/registerUser">
+							<div class="form-group">
+								<label for="Username">Username:</label>
+								<input type="text" class="form-control" id="username"  name="username">
+								
+							</div>
+							
+							
+								
+							<div class="form-group">
+								<label for="password">password</label>
+								<input type="password" class="form-control" id="password"  name="password">
+							
+							</div>
+							<div class="form-group">
+								<label for="email">email</label>
+								<input type="email" class="form-control" id="email"  name="email">
+							
+							</div>
+							<input type="button" id="sub"  class="btn btn-default" value="Register">
+													</form>
+</div>
+
+<script >
+$(document).ready(function(){
+$('#invalid').hide();
+	$('#sub').click(function(){
+		var name=$('#username').val();
+		var password=$('#password').val();
+		var email=$('#email').val();
+		if(password != "" && username != "" && email != ""){
+			$('#infoform').submit();	
+		}else{
+			$('#invalid').show();
+		}
+	});
+});
+
+</script>

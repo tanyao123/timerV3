@@ -1,0 +1,39 @@
+<div>
+<div class="alert alert-danger" id="invalid">After you login but you still in this page, you may have the fllowing mistakes:</br>
+1.Error username or password</br>
+2.The same account has already loged in</br></br>
+Your can register a new account numer by click the Register button</div>
+	<form role="form" name="infoform" id="infoform" method="post" action="/loginform">
+							<div class="form-group">
+								<label for="Username">Username:</label>
+								<input type="text" class="form-control" id="username"  name="username" onkeyup="diss(this);">
+								
+							</div>
+							
+							
+								
+							<div class="form-group">
+								<label for="password">password</label>
+								<input type="password" class="form-control" id="password"  name="password" onkeyup="diss(this);">
+							
+							</div>
+							<input type="button" id="sub"  class="btn btn-default" value="Submit">
+													</form>
+</div>
+<a href="/register">Register</a>
+<script >
+
+$(document).ready(function(){
+	$('#username').focus();
+	$('#sub').click(function(){
+		var name=$('#username').val();
+		var password=$('#password').val();
+		if(password != "" || username != ""){
+			$('#infoform').submit();	
+		}else{
+			$('#invalid').show();
+			$('#password').focus();
+		}
+	});
+});
+</script>

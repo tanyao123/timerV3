@@ -1,0 +1,16 @@
+.cen{
+	padding-top:20px;
+	padding-bottom:50px;
+	height: 300px;
+    border: #795548;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #9E9E9E;
+	margin-bottom:40px;
+	text-align:center;
+	background-color:white;
+}
+.short{
+	width:35px;
+	margin-left:15px;
+}
